@@ -33,23 +33,10 @@ Unfortunately for me (and perhaps fortunately for you) that was **not** possible
 
 Bear in mind that I don't guarantee any level of accuracy and the model is **at best** directionally interesting to look at...for now 🤞
 
-#### Price Estimator Model Accuracy by Parish
+#### Price Estimator Model Accuracy by Parish (As of Dec 2024)
 
-| Parish           | Median Error Rate | Test Sample Size |
-|------------------|-------------------|------------------|
-| Clarendon        | 17.72%            | 96               |
-| Hanover          | 17.88%            | 22               |
-| Kingston & St. Andrew | 10.46%      | 614              |
-| Manchester       | 18.06%            | 156              |
-| Portland         | 38.07%            | 15               |
-| St. Ann          | 11.24%            | 205              |
-| St. Catherine    | 15.20%            | 283              |
-| St. Elizabeth    | 20.40%            | 67               |
-| St. James        | 23.79%            | 143              |
-| St. Mary         | 10.27%            | 79               |
-| St. Thomas       | 20.88%            | 21               |
-| Trelawny         | 9.69%             | 40               |
-| Westmoreland     | 19.54%            | 62               |
+![image](https://github.com/user-attachments/assets/c751e0a5-45cd-495f-aab8-3d9de956d0bc)
+
 
 
 ### Which team is behind this project?
