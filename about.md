@@ -21,7 +21,17 @@ The same way that you do! Real estate data is, thankfully, pretty abundant howev
 Enriching the data might involve adding accessory data sources like povery data, some inference from satellite imagery, and, of course, input from _AI_. 
 
 ### How reliable is the data?
-<Legalese>This website or its maintainer in no way guarantees complete accuracy and accepts zero responsibility for any actions that you choose to undertake after consuming that data</Legalese>
+
+< Legalese >
+
+> This website and its administrator disclaim any guarantees of complete accuracy regarding the information provided.
+> Furthermore, they accept no responsibility or liability for any actions taken based on the use or interpretation of the data presented.
+> Users are advised to exercise their own judgment and due diligence when relying on the information available.
+
+< /Legalese >
+
+
+
 With that being said, I've eye-balled it and cleaned it and de-duplicated it and in my **gut** it looks good. Obviously, you should verify it (like with any data source).
 
 ### On the accuracy of the Price Estimation Model
