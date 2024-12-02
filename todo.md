@@ -1,9 +1,9 @@
-- Add new page to get location insights ✔️
-- Integrate property price estimator model ✔️
-- Create super dope catchy icon ✔️
-- Add About page ✔️
-- Add change log ✔️
-- Add todo page (meta) ✔️
+- ~Add new page to get location insights~ 
+- ~Integrate property price estimator model~ 
+- ~Create super dope catchy icon~ 
+- ~Add About page~
+- ~Add change log~ 
+- ~Add todo page (meta)~ 
 - Add new data sources to augment rental data
 - Figure out “time on market” calculations
 - Integrate AI visual property analysis feature
