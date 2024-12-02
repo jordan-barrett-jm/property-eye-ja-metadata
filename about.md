@@ -56,7 +56,8 @@ Bear in mind that I don't guarantee any level of accuracy and the model is **at 
 
 A team of 1 so far
 
-<img src="https://github.com/user-attachments/assets/f33675cd-0a7c-49a1-9e75-b55a3fa7c805" alt="Jordan Barrett, moi" width="280">
+![391738637-f33675cd-0a7c-49a1-9e75-b55a3fa7c805 (1)](https://github.com/user-attachments/assets/1bf03807-ed9e-4685-a721-21e465c55124)
+
 
 Quick stats:
 * Jordan Barrett
@@ -66,8 +67,8 @@ Quick stats:
 * Graph enthusiast
 
 Web identity:
-- https://github.com/jordan-barrett-jm/
-- https://www.linkedin.com/in/jordan-barrett-jm/
+- [Github](https://github.com/jordan-barrett-jm/)
+- [Professional persona](https://www.linkedin.com/in/jordan-barrett-jm/)
 
 
 ### Complaints and Feedback
