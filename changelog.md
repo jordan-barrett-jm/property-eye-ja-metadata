@@ -1,5 +1,3 @@
-## Changelog
-
 ### V0.1 Dec 3, 2024
 - Launch 🎉
 - Mobile-friendly UI
