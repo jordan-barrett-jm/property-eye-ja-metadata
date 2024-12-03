@@ -1,7 +1,9 @@
 > The purpose of a system is what it does
-> ~ some guy
 
-Completely ignoring the above quote, I'll start off with what the _intention_ is for PropertyEyeJA before I get into what it **is**.
+~ Stafford Beer
+
+
+Completely ignoring that [elegant dictum from Mr Beer](https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does), I'll start off with what the _intention_ is for PropertyEyeJA before I get into what it **is**.
 
 PropertyEyeJA aims to provide insight into the Jamaican real estate market in an accessible (mostly) manner, attempting to provide some amount of information symmetry among market participants.
 
