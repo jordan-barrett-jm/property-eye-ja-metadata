@@ -77,7 +77,7 @@ For constructive feedback, which is **welcome** you can email me (Jordan) person
 
 **NOTE**: You can also send me cool data sources, which I maintain a repository of [here](https://docs.google.com/document/d/e/2PACX-1vTNApip1F4QHeQY3z_1oN5pyCoOZ1K091lt_Rvm0nue1XdAgq6xd81PckYUSbSFePI1x5KvQ_i_s24S/pub)
 
-**NOTE2**: I'm always open to considering collaboration on cool/exciting/challenge data projects. Feel free to reach out.
+**NOTE2**: I'm always open to considering collaboration on cool/exciting/challenging data projects. Feel free to reach out.
 
 
 
