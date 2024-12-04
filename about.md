@@ -16,7 +16,7 @@ In short, this platform/web app/data source **should** make it wayyyy easier for
 It's a fun project that I will try to tinker with and iteratively improve
 
 ### Do I have to pay you?
-Well, first I don't think we've been acquainted and I'm not entirely sure if this is **valuable** to you. So, first how about you try to use it and then we can talk about compensation a bit later on. For now, you can pay me by making the usage numbers go up.
+Well, first I don't think we've been acquainted and I'm not entirely sure if this is **valuable** to you. So, first how about you try to use it and then we can talk about compensation a bit later on? For now, you can pay me by making the usage numbers go up.
 
 ### How do you get the data?
 The same way that you do! Real estate data is, thankfully, pretty abundant however disorganized. I access it from public listing sources, clean it, and drop it here for your convenience.
@@ -34,9 +34,9 @@ Enriching the data might involve adding accessory data sources like povery data,
 
 
 
-With that being said, I've eye-balled it and cleaned it and de-duplicated it and in my **gut** it looks good. Obviously, you should verify it (like with any data source).
+With that being said, I've eye-balled it and cleaned it and de-duplicated it and in my **gut** says it looks _reasonably_ good (barring sample size issues for granular filters). Obviously, you should verify it ([like with any data source](https://www.global-developments.org/p/how-much-should-we-trust-developing).
 
-### On the accuracy of the Price Estimation Model
+### On the (in)accuracy of the Price Estimation Model
 I spent a few weeks on another projecting working on the Real Estate price estimation model with the hopes that I could replicate [Zillow's Zestimate accuracy rate](https://www.zillow.com/z/zestimate/) which has a median error rate of around 2.4%. 
 
 The idea was that if I could have a model that predicted valuations with sub-5% error rates I could reliably identify arbitrage opportunities then [some steps in between] and profit.
@@ -72,7 +72,7 @@ Web identity:
 
 ### Complaints and Feedback
 
-For all complaints, you can write up a thoughtful, emotive, and heartfelt draft in Google Docs using Times New Roman 12pt font. Double-spaced if you would kindly. You can direct those well-crafted complaints to your recycling bin and can expect an immediate response as seratonin is released and your stress levels fall.
+For all complaints, you can write up a thoughtful, emotive, and heartfelt draft in Google Docs using Times New Roman 12pt font. Double-spaced if you would kindly. You can direct those well-crafted complaints to your recycling bin and can expect an immediate response as your cortisol levels plummet and dopamine releases.
 
 For constructive feedback, which is **welcome** you can email me (Jordan) personally at the email address below:
 ![image](https://github.com/user-attachments/assets/9aec2850-cd7e-43db-ab43-3f630608f95e)
