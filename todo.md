@@ -4,7 +4,9 @@
 - Add About page ✔️
 - Add change log ✔️
 - Add todo page (meta) ✔️
+- Add accessory statistics for locations (poverty rate, urban/rural, building density) (amenities?)
 - Add new data sources to augment rental data
+- Amenity analysis tool
 - Figure out “time on market” calculations
 - Integrate AI visual property analysis feature
 - Add AI property analysis from links
