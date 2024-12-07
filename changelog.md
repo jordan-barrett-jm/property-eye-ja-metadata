@@ -1,4 +1,7 @@
-### V0.1 Dec 3, 2024
+### Dec 7, 2024
+- Added new  `PriceGuessr` mini-game to increase shareability 🎮
+
+### Dec 3, 2024
 - Launch 🎉
 - Mobile-friendly UI
 - Features supported are:
