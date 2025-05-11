@@ -6,7 +6,7 @@
 - Add todo page (meta) ✔️
 - Add a "guess the price" mini-game ✔️
 - Add accessory statistics for locations (poverty rate, urban/rural, building density) (amenities?)
-- Add new data sources to augment rental data
+- Add new data sources to augment rental data ✔️
 - Amenity analysis tool
 - Figure out “time on market” calculations
 - Integrate AI visual property analysis feature
