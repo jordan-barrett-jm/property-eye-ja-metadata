@@ -18,12 +18,13 @@
 - Integrate user auth
 - Cloudflare?
 
-### High Priority
+## High Priority
 - Update growth metrics calculation to use median stratification approach
 - Add new growth by stratum view on either Market Overview or Location Insights page
 - Update to using price/sq ft for time-series visualizations (probably add exponential smoothing)
 - Simplify community insights to avoid spurious analytical takeaways. (do roll-ups where necessary)
+- Update PriceGuessr to show final guess before going to end screen. (this is super annoying!!!)
 
-## Medium Priority
+### Medium Priority
 - Update/Test price estimation model with $/sq ft. Perhaps attempt more involved stratification.
 - Add new regions to better capture property distributions (eg. rural, north coast, other urban areas)
