@@ -57,17 +57,17 @@ I've recently refreshed how I go about handling growth calculations to be a lot 
 
 I calculate the growth figures by first dividing up the data into quarters, starting from the beginning of 2022. I also find the price per square foot for each listing. This is the building size of the property (not the lot size). I found that price per square foot was the metric most economically sensible to since it normalizes the data across numbers of rooms, and makes it more sensible to compare different property types.
 
-<img width="785" height="165" alt="image" src="https://github.com/user-attachments/assets/81f524e7-e1e0-45dd-b8c6-0b2d3d6de59d" />
+![image](https://github.com/user-attachments/assets/81f524e7-e1e0-45dd-b8c6-0b2d3d6de59d)
 
 
 I then filter out by property types. I stick with the property types that have the most listings so I don't get wonky growth figures. Those are: houses, apartments, and townhouses. I only show townhouse and apartment growth data for Kingston and St. Andrew because the other regions have such low listing numbers that it makes the figure unreliable and highly unstable.
 
-<img width="974" height="165" alt="image" src="https://github.com/user-attachments/assets/eaf3daf6-ebbe-4d98-973f-58ddffaf5f26" />
+![image](https://github.com/user-attachments/assets/eaf3daf6-ebbe-4d98-973f-58ddffaf5f26)
 
 
 For each quarter, I find the median price per square foot across each stratum - house, townhouse, apartment - and the growth rate is defined as the difference in value between current and last quarter in the same time last year divided through by the value in the last quarter. 
 
-<img width="974" height="165" alt="image" src="https://github.com/user-attachments/assets/f28aeeab-ed04-4602-b4ab-caeadd2beea0" />
+![image](https://github.com/user-attachments/assets/f28aeeab-ed04-4602-b4ab-caeadd2beea0)
 
 For illustration, if the price per square foot for an apartment in 2025Q1 is $104 and in 2024Q1 it was $100, then the growth in 2025Q1 would be 4%.
 
