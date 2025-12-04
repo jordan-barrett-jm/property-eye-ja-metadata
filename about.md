@@ -1,26 +1,25 @@
-> The purpose of a system is what it does
+> To overcome difficulties is to experience the full delight of existence, no matter where the obstacles are encountered.
 
-~ Stafford Beer
+~ Arthur Schopenhauer
 
 
-Completely ignoring that [elegant dictum from Mr Beer](https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does), I'll start off with what the _intention_ is for PropertyEyeJA before I get into what it **is**.
+I'm not so sure about the delight bit, but working with patchy, heterogeneous and not-so-error-free real estate listing data has definitely had its obstacles.
 
-PropertyEyeJA aims to provide insight into the Jamaican real estate market in an accessible (mostly) manner, attempting to provide some amount of information symmetry among market participants.
+**PropertyEyeJA** aims to provide insight into the Jamaican real estate market in an accessible manner, with the overall intention of reducing information asymmetry between would-be buyers and other hopeful market participants and the more experienced agents within the market. 
 
-In short, this platform/web app/data source **should** make it wayyyy easier for you to glean some insight into an otherwise opaque (IMO) market. 
+In short, this platform **should** make it substantially easier for you (assuming the modal interested-but-not-informed user) to glean some insight into an otherwise opaque property market. 
+
+I offer these insights by crawling listing sites, then cleaning, standardizing and aggregating the data. The visualizations shown on this site were determined at my discretion, but they were guided by the aim to provide maximal insight with minimum headache for the viewer. I apologize if I've failed in that effort.
 
 
 ## Not so frequently asked questions
 
-### What is PropertyEyeJA?
-It's a fun project that I will try to tinker with and iteratively improve
-
-### Do I have to pay you?
-Well, first I don't think we've been acquainted and I'm not entirely sure if this is **valuable** to you. So, first how about you try to use it and then we can talk about compensation a bit later on? For now, you can pay me by making the usage numbers go up.
+### Is there a charge?
+Yes, if you use this site for more than 30 seconds you are obligated to pay me in Internet points. That's right, you'll need to share it with your friends.
 
 ### How do you get the data?
-The same way that you do! Real estate data is, thankfully, pretty abundant however disorganized. I access it from public listing sources, clean it, and drop it here for your convenience.
-Enriching the data might involve adding accessory data sources like povery data, some inference from satellite imagery, and, of course, input from _AI_. 
+Real estate data is pretty abundant, however disorganized. I access it from public listing sources, clean it, and drop it here for your convenience.
+Enriching the data might involve adding accessory data sources like poverty statistics, some inference from satellite imagery, and, perhaps , input from _AI_. 
 
 ### How reliable is the data?
 
@@ -35,6 +34,9 @@ Enriching the data might involve adding accessory data sources like povery data,
 
 
 With that being said, I've eye-balled it and cleaned it and de-duplicated it and in my **gut** says it looks _reasonably_ good (barring sample size issues for granular filters). Obviously, you should verify it ([like with any data source](https://www.global-developments.org/p/how-much-should-we-trust-developing).
+One thing I do want to note here is that its listing data, so it's likely slightly biased upwards. 
+
+Assuming that the seller is an economically reasonable agent, a reasonable bet would be that the prices stated are the highest the seller believes they can reasonably get the listing sold for. So, I'd say some slight rounding down would be in order maybe on the order of 2-3% from my investigation.
 
 ### On the (in)accuracy of the Price Estimation Model
 I spent a few weeks on another projecting working on the Real Estate price estimation model with the hopes that I could replicate [Zillow's Zestimate accuracy rate](https://www.zillow.com/z/zestimate/) which has a median error rate of around 2.4%. 
@@ -49,60 +51,25 @@ Bear in mind that I don't guarantee any level of accuracy and the model is **at 
 
 ![image](https://github.com/user-attachments/assets/c751e0a5-45cd-495f-aab8-3d9de956d0bc)
 
-### How is the price index constructed?
+### How are the growth statistics calculated?
 
-#### Background
+I've recently refreshed how I go about handling growth calculations to be a lot more conservative. My initial implementation was using some heavy statistical machinery that I think was a bit too much for the scale of data we're handling here. 
 
-First, I'll start with the background on _why_ a price index was even required. Jamaica's real estate market is fairly small (in terms of volume of sales/listings) but with a large degree of diversity among the unique properties - # of bedrooms, the community it's located in, the square footage of the land its on. On a month-by-month basis there is considerable variation in the composition of the properties listed. I'll provide an example for illustration:
+I calculate the growth figures by first dividing up the data into quarters, starting from the beginning of 2022. I also find the price per square foot for each listing. This is the building size of the property (not the lot size). I found that price per square foot was the metric most economically sensible to since it normalizes the data across numbers of rooms, and makes it more sensible to compare different property types.
 
-![image](https://github.com/user-attachments/assets/df4c5c29-01e9-46c2-bc7d-53052475d3c1)
-
-
-This is somewhat exaggerated but not that far from observations I've made in the live data. The mix of properties varies over time, which has an impact on the average price across time periods. The result is that attempting to interpret how much the value has appreciated period-over-period becomes error-prone, as apples-to-apples comparisons become pretty much impossible. 
-
-If you take the median prices at face value (haha) in the example I provided, you'd be forced to interpret home values as increasing almost 30% from Jan 2025 to Apr 2025. This would obviously be incorrect as the increase is largely attributable to there being more luxury properties listed in the latter period. 
-
-Constructing a price index fixes the issue of variation in property mix across time. It allows an analyst to perform true apples-to-apples comparison across periods to identify how prices independent of quality have trended.
-
-#### Implementation
-
-The implementation for the price index was inspired by the following papers:
-
-- [A Hedonic Residential Real Estate Index for Jamaica (R Brian Langrin - Bank of Jamaica)](https://boj.org.jm/uploads/pdf/papers_pamphlets/papers_pamphlets_A_Hedonic_Residential_Real_Estate_Index_for_Jamaica_A_Pilot_Study_of_the_Kingston_&_St._Andrew_Region.pdf)
-- [How to better measure hedonic residential property price indexes (Mick Silver - IMF)](https://www.imf.org/external/pubs/ft/wp/2016/wp16213.pdf)
-
-Specifically, my implementation resembles the characteristics approach described in the latter paper. In very simple terms (how I best understand things) I constructed the index in the below method:
-
-1) Built a hedonic regression model for property listings over the past 3 years, incorporating home characteristic factors like bedrooms, bathrooms, square footage, etc. and the quarter it was listed in.
-2) Defined a common basket of properties as the set of properties sold in the first quarter.
-3) Predicted the value of the homes in that common basket for each successive period using the hedonic regression model.
-4) Calculated the ratio between the average predicted value of the properties in each period and the value of those properties and multiplied it by 100.
-
-The final calculation would be the index value for each period (quarter).
-
-Now, I'll attempt a slightly more formal definition using the aid of an LLM:
-
-We start by defining our hedonic regression model as the below
-![image](https://github.com/user-attachments/assets/7a7d1661-64f3-4b5c-842a-887eea724103)
+<img width="785" height="165" alt="image" src="https://github.com/user-attachments/assets/81f524e7-e1e0-45dd-b8c6-0b2d3d6de59d" />
 
 
-Fixed attributes are defined as bedrooms, bathrooms, parish, property type and square footage while segments are created for the pricing tier, parish (for the market model) and property type. 
-These segments are made to interact with the time dummy variable as I observed them to vary significantly through time.
+I then filter out by property types. I stick with the property types that have the most listings so I don't get wonky growth figures. Those are: houses, apartments, and townhouses. I only show townhouse and apartment growth data for Kingston and St. Andrew because the other regions have such low listing numbers that it makes the figure unreliable and highly unstable.
 
-The reference basket is then derived from the first period and the average predicted price is calculated using our model.
+<img width="974" height="165" alt="image" src="https://github.com/user-attachments/assets/eaf3daf6-ebbe-4d98-973f-58ddffaf5f26" />
 
-![image](https://github.com/user-attachments/assets/e83dd31d-d5ba-4f54-828e-3e8e27e3f105)
 
-We then use the same reference basket to calculate the average predicted price in quarter t
+For each quarter, I find the median price per square foot across each stratum - house, townhouse, apartment - and the growth rate is defined as the difference in value between current and last quarter in the same time last year divided through by the value in the last quarter. 
 
-![image](https://github.com/user-attachments/assets/0314ea11-13fd-4908-969c-d2b3723aaefc)
+<img width="974" height="165" alt="image" src="https://github.com/user-attachments/assets/f28aeeab-ed04-4602-b4ab-caeadd2beea0" />
 
-Finally, the index for quarter t is found by calculating the ratio of average predicted prices through the ratio between the average predicted prices in quarter 0 and quarter t
-
-![image](https://github.com/user-attachments/assets/730ef5fb-48c4-4233-bd91-1a8b1184f102)
-
-If you have ideas on improvements I could make to this approach please do reach out but I'm OK enough with this method in that I don't feel like shutting down the whole web app every time I look at the chart. By that metric, this change represents considerable performance gains.
-
+For illustration, if the price per square foot for an apartment in 2025Q1 is $104 and in 2024Q1 it was $100, then the growth in 2025Q1 would be 4%.
 
 ### What team is behind this project?
 
