@@ -1,3 +1,11 @@
+### Dec 3, 2025
+- 1-year launch anniversary 🎉🎉🎉
+- I overhauled pretty much every feature:
+  - Growth analytics are now all in one area with more robust groupings.
+  - Updated the Market Overview page to give more detail across property types
+  - Updated the Location Insights page with new filters
+  - New trend chart showing price per sq ft (much more valid metric to track growth over time)
+ 
 ### May 11, 2025
 - Revamped calculation of community and parish-level growth figures using a hedonic pricing model
 - Added new parish-level and islandwide price indices
