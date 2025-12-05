@@ -7,7 +7,7 @@ I'm not so sure about the delight bit, but working with patchy, heterogeneous an
 
 **PropertyEyeJA** aims to provide insight into the Jamaican real estate market in an accessible manner, with the overall intention of reducing information asymmetry between would-be buyers and other hopeful market participants and the more experienced agents within the market. 
 
-In short, this platform **should** make it substantially easier for you (assuming the modal interested-but-not-informed user) to glean some insight into an otherwise opaque property market. 
+In short, this platform *should* make it substantially easier for you (assuming the modal interested-but-not-informed user) to glean some insight into an otherwise opaque property market. 
 
 I offer these insights by crawling listing sites, then cleaning, standardizing and aggregating the data. The visualizations shown on this site were determined at my discretion, but they were guided by the aim to provide maximal insight with minimum headache for the viewer. I apologize if I've failed in that effort.
 
@@ -39,7 +39,7 @@ One thing I do want to note here is that its listing data, so it's likely slight
 Assuming that the seller is an economically reasonable agent, a reasonable bet would be that the prices stated are the highest the seller believes they can reasonably get the listing sold for. So, I'd say some slight rounding down would be in order maybe on the order of 2-3% from my investigation.
 
 ### On the (in)accuracy of the Price Estimation Model
-I spent a few weeks on another projecting working on the Real Estate price estimation model with the hopes that I could replicate [Zillow's Zestimate accuracy rate](https://www.zillow.com/z/zestimate/) which has a median error rate of around 2.4%. 
+I spent a few weeks on another project working on the Real Estate price estimation model with the hopes that I could replicate [Zillow's Zestimate accuracy rate](https://www.zillow.com/z/zestimate/) which has a median error rate of around 2.4%. 
 
 The idea was that if I could have a model that predicted valuations with sub-5% error rates I could reliably identify arbitrage opportunities then [some steps in between] and profit.
 
